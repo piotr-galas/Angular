@@ -2,7 +2,7 @@
     "name": "piga/angular",
     "autoload": {
         "psr-4" : {
-            "Piga\\AngularBundle\\" : "src"
+            "Piga\\AngularBundle\\" : ""
         }
     }
 }
