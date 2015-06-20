@@ -1,0 +1,28 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/pigangbase/css/app.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('bower_components/jquery/dist/jquery.js') }}"></script>
+    <script src="{{ asset('bower_components/angular/angular.js') }}"></script>
+    <script src="{{ asset('bower_components/angular-animate/angular-animate.js') }}"></script>
+    <script src="{{ asset('bower_components/angular-route/angular-route.js') }}"></script>
+    <script src="{{ asset('bower_components/angular-resource/angular-resource.js') }}"></script>
+    <script src="{{ asset('bundles/pigangbase/js/app.js') }}"></script>
+    <script src="{{ asset('bundles/pigangbase/js/controllers.js') }}"></script>
+    <script src="{{ asset('bundles/pigangbase/js/filters.js') }}"></script>
+    <script src="{{ asset('bundles/pigangbase/js/services.js') }}"></script>
+    <script src="{{ asset('bundles/pigangbase/js/directives.js') }}"></script>
+
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    {#<script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>#}
+{% endblock %}
+
+{% block body %}
+    {% block content %}
+    {% endblock %}
+{% endblock %}
+
