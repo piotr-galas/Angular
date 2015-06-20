@@ -1,0 +1,3 @@
+piga_angular_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: PigaAngularBundle:Default:index }
