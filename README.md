@@ -15,7 +15,8 @@ instalation
 * Download PigaAngularBundle using composer
 * Enable the Bundle and RelatedBundle
 * Import angular routing
-* Run initialize command
+* Run initialize commmand
+* Open default page in browser
 
 
 ###step one 
@@ -50,6 +51,30 @@ In YAML:
 # app/config/routing.yml
 piga_angular:
     resource: "@PigaAngularBundle/Resources/config/routing.yml"
-
+```
+    
 ###Step four
-     run
+run command
+
+     app/console piga:angular:install
+
+this command run 
+ * bower install (in pigabundle directory)
+ * app/console assetic:install --symlink web
+ 
+ result of runing this command should be symlink to angular libraries inside your web catalog
+
+###step five
+
+open demo page in browser
+
+     app_dev.php/index
+And you will see demo controller
+
+##If you get some errors please report it creating new issue
+
+
+Basic usage
+=============
+
+link to documentation soon
