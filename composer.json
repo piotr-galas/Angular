@@ -7,7 +7,9 @@
     },
     "require": {
         "friendsofsymfony/rest-bundle": "~1.5",
-        "friendsofsymfony/jsrouting-bundle": "~1.5",
-        "jms/serializer-bundle": "0.13.*"
+        "friendsofsymfony/jsrouting-bundle": "~1.5"
+    },
+    "suggest": {
+        "friendsofsymfony/rest-bundle"  : "very helpfull to rendering json instead of html"
     }
 }

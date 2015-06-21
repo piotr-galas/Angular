@@ -4,6 +4,7 @@ namespace Piga\AngularBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
+use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 
@@ -12,24 +13,43 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class PigaAngularExtension extends Extension
+class PigaAngularExtension extends Extension implements PrependExtensionInterface
 {
     /**
      * {@inheritdoc}
      */
     public function load(array $configs, ContainerBuilder $container)
     {
-        $configuration = new Configuration();
+
+
+		$configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
-
 		$this->addConfigToContainer($container, $config);
+
     }
 
 	private function addConfigToContainer($container, $config)
 	{
 		$container->setParameter('base.angular.view', $config['base_angular_view']);
+	}
+
+	public function prepend(ContainerBuilder $container)
+	{
+		$bundles = $container->getParameter('kernel.bundles');
+		$config = array('routes_to_expose' => array(
+			'angular_demo'
+		));
+		if (isset($bundles['FOSJsRoutingBundle'])) {
+			foreach ($container->getExtensions() as $name => $extension) {
+				switch ($name) {
+					case 'fos_js_routing':
+						$container->prependExtensionConfig($name, $config);
+						break;
+				}
+			}
+		}
 	}
 }
