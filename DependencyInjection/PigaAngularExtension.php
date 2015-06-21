@@ -24,5 +24,12 @@ class PigaAngularExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+
+		$this->addConfigToContainer($container, $config);
     }
+
+	private function addConfigToContainer($container, $config)
+	{
+		$container->setParameter('base.angular.view', $config['base_angular_view']);
+	}
 }

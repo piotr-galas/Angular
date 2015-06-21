@@ -8,7 +8,7 @@ class AngularController extends BaseController
 {
     public function indexAction()
     {
-        return $this->render('PigaAngularBundle:Angular:index.html.twig'
-        );
+        $baseAngularView = $this->getParameter('base.angular.view');
+		return $this->render($baseAngularView);
     }
 }

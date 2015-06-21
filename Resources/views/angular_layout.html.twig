@@ -6,17 +6,18 @@
 {% endblock %}
 
 {% block javascripts %}
-    <script src="{{ asset('bundles/pigaangular/bower_components/jquery/dist/jquery.js') }}"></script>
-    <script src="{{ asset('bundles/pigaangular/bower_components/angular/angular.js') }}"></script>
-    <script src="{{ asset('bundles/pigaangular/bower_components/angular-animate/angular-animate.js') }}"></script>
-    <script src="{{ asset('bundles/pigaangular/bower_components/angular-route/angular-route.js') }}"></script>
-    <script src="{{ asset('bundles/pigaangular/bower_components/angular-resource/angular-resource.js') }}"></script>
-    <script src="{{ asset('bundles/pigaangular/js/app.js') }}"></script>
-    <script src="{{ asset('bundles/pigaangular/js/controllers.js') }}"></script>
+    {% block angular_base_library %}
+        <script src="{{ asset('bundles/pigaangular/bower_components/jquery/dist/jquery.js') }}"></script>
+        <script src="{{ asset('bundles/pigaangular/bower_components/angular/angular.js') }}"></script>
+        <script src="{{ asset('bundles/pigaangular/bower_components/angular-animate/angular-animate.js') }}"></script>
+        <script src="{{ asset('bundles/pigaangular/bower_components/angular-route/angular-route.js') }}"></script>
+        <script src="{{ asset('bundles/pigaangular/bower_components/angular-resource/angular-resource.js') }}"></script>
+        <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+        <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+    {% endblock %}
 
-
-    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
-    <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+    {% block angular_files %}
+    {% endblock %}
 {% endblock %}
 
 {% block body %}
