@@ -78,4 +78,6 @@ And you will see demo controller
 Basic usage
 =============
 
-link to documentation soo  run
+[tutorial](https://github.com/piotr-galas/Angular/blob/master/doc/Tutorial.md)
+
+[usage](https://github.com/piotr-galas/Angular/blob/master/doc/Documentation.md)

@@ -6,7 +6,6 @@
         }
     },
     "require": {
-        "friendsofsymfony/rest-bundle": "~1.5",
         "friendsofsymfony/jsrouting-bundle": "~1.5"
     },
     "suggest": {

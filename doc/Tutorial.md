@@ -1,5 +1,7 @@
 Tutorial
 ==================
+This tutorial show how use this bundle
+
 * configure
 * create controller and actiorn (symfony standart symfony way)
 * add route to fos_js_routing config
@@ -80,7 +82,7 @@ you should see default page with "homepage" text because controller render "app/
  
  [FosJSRoutingBundle doumentation](https://github.com/FriendsOfSymfony/FOSJsRoutingBundle/blob/master/Resources/doc/index.md)
  
-``` yaml
+``` ya
 # app/config/config.yml
 
 fos_js_routing:
