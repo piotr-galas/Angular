@@ -19,11 +19,11 @@ instalation
 * Open default page in browser
 
 
-###step one 
+###step one
 download bundle using composer
 
       composer require "piga/angular": "dev-master"
- 
+
 ###step two
 
 
@@ -50,18 +50,19 @@ In YAML:
 ``` yaml
 # app/config/routing.yml
 piga_angular:
+
     resource: "@PigaAngularBundle/Resources/config/routing.yml"
 ```
-    
+
 ###Step four
 run command
 
      app/console piga:angular:install
 
-this command run 
+this command run
  * bower install (in pigabundle directory)
  * app/console assetic:install --symlink web
- 
+
  result of runing this command should be symlink to angular libraries inside your web catalog
 
 ###step five
@@ -77,4 +78,4 @@ And you will see demo controller
 Basic usage
 =============
 
-link to documentation soon
+link to documentation soo  run
