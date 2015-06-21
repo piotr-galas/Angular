@@ -1,3 +1,11 @@
-piga_angular_homepage:
-    path:     /hello/{name}
+angular_base_path:
+    path:     /index
     defaults: { _controller: PigaAngularBundle:Angular:index }
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+
+angular_demo:
+    path:     /demo
+    defaults: { _controller: PigaAngularBundle:Demo:index }

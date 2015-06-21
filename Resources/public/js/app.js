@@ -4,23 +4,17 @@
 
 var symfonyApp = angular.module('symfonyApp', [
     'ngRoute',
-    'symfonyControllers',
-    'symfonyDirectives',
-    'symfonyServices'
+    'symfonyControllers'
 ]);
 
 symfonyApp.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
-            when('/login',{
-                templateUrl: Routing.generate('override_fos_user_security_login'),
-                controller: 'LoginCtrl'
-            }).
-            when('/register',{
-                templateUrl: Routing.generate('override_fos_user_registration_register'),
-                controller: 'RegisterCtrl'
+            when('/demo',{
+                templateUrl: Routing.generate('angular_demo'),
+                controller: 'DemoCtrl'
             }).
             otherwise({
-                redirectTo: '/login'
+                redirectTo: '/demo'
             });
     }]);
