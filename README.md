@@ -22,7 +22,11 @@ instalation
 ###step one
 download bundle using composer
 
-      composer require "piga/angular": "dev-master"
+      composer require piga/angular
+
+or add to your composer.json
+
+      "piga/angular": "^1.0"
 
 ###step two
 
@@ -78,6 +82,10 @@ And you will see demo controller
 Basic usage
 =============
 
-[tutorial](https://github.com/piotr-galas/Angular/blob/master/doc/Tutorial.md)
+What next?
 
-[usage](https://github.com/piotr-galas/Angular/blob/master/doc/Documentation.md)
+Usage tutorial [tutorial](https://github.com/piotr-galas/Angular/blob/master/doc/Tutorial.md)
+
+Usage flow [usage](https://github.com/piotr-galas/Angular/blob/master/doc/Documentation.md)
+
+Demo project useing this bundle [demo](https://github.com/piotr-galas/demo-angular)

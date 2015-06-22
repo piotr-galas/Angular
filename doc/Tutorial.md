@@ -25,6 +25,8 @@ piga_angular:
 
 and then add this file inside your bundle
 ```twig
+# src/AppBundle/Resources/views/Angular/index.html.twig
+
 {% extends 'PigaAngularBundle::angular_layout.html.twig' %}
 
 {% block angular_files %}
@@ -127,8 +129,12 @@ symfonyApp.config(['$routeProvider',
                 redirectTo: '/angular_demo'
             });
     }]);
-```    
+```
+
 ```js
+
+/* src/AppBundle/Resources/public/js/app.js */
+
 var symfonyControllers = angular.module('symfonyControllers', []);
 
 
@@ -139,6 +145,7 @@ symfonyControllers.controller('DemoCtrl', function ($scope, $location) {
 symfonyControllers.controller('AnotherDemoCtrl', function ($scope, $location) {
     //you dont need add anything to this controller to use angular routing, you can leave it empty
 });
+
 ```
 
 You dont need to understand what js do in files above. If you are not familiar with angular you can just update three parameters related to your symfony route and use copy/paste to ad new
